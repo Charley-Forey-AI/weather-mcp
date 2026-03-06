@@ -1,0 +1,19 @@
+[project]
+name = "mcp-weather"
+version = "0.1.0"
+description = "Weather forecast tool for MCP"
+authors = []
+dependencies = [
+    "fastmcp",
+    "python-dotenv",
+    "aiohttp",
+    "uvicorn",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+mcp-weather = "mcp_weather.weather:mcp.run"
+mcp-weather-http = "mcp_weather.weather:main"
